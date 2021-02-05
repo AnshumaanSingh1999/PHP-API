@@ -1,8 +1,5 @@
 <?php
-
-
 $response=array();
-
 $db_connection = mysqli_connect("localhost", "root", "", "apidb");
 if($db_connection){
     $query = "SELECT * FROM cars"; 
@@ -16,7 +13,6 @@ if($db_connection){
             $response[$i]['Age']=$row['Age'];
             $response[$i]['Company']=$row['Company'];
             $i++;
-
         }
         echo json_encode($response,JSON_PRETTY_PRINT);
     }
